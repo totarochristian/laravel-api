@@ -29,4 +29,24 @@ class ProjectController extends Controller
             ]);
         }
     }
+
+    /**
+     * Return a json response with the specified project (if exists in the local db).
+    */
+    public function show($slug)
+    {
+        //return the first element with the same slug (without first() returns an array)
+        $project = Project::with("category")->where('slug',$slug)->first();
+        if($project){
+            return response()->json([
+                "success" => true,
+                "results" => $project
+            ]);
+        }else{
+            return response()->json([
+                "success" => false,
+                "results" => "Project not found!"
+            ]);
+        }
+    }
 }
