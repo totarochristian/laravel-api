@@ -49,6 +49,22 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label for="live_site">Sito live</label>
+                <input type="text" class="form-control @error('live_site') is-invalid @enderror" name="live_site" id="live_site"
+                    required maxlength="150" minlength="3" value="{{ old('live_site', $project->live_site) }}">
+                @error('live_site')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="git_repository">Repo Github</label>
+                <input type="text" class="form-control @error('git_repository') is-invalid @enderror" name="git_repository" id="git_repository"
+                    required maxlength="150" minlength="3" value="{{ old('git_repository', $project->git_repository) }}">
+                @error('git_repository')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
             <div class="form-group">
                 <p>Seleziona i Tag:</p>
                 @foreach ($tags as $tag)
