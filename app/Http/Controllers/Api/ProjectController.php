@@ -15,7 +15,7 @@ class ProjectController extends Controller
     public function index()
     {
         //Eager loading: return also the category data
-        $projects = Project::with("category")->paginate(5);
+        $projects = Project::with("category","tags")->paginate(5);
 
         if($projects){
             return response()->json([
