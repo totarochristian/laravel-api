@@ -36,7 +36,7 @@ class ProjectController extends Controller
     public function show($slug)
     {
         //return the first element with the same slug (without first() returns an array)
-        $project = Project::with("category")->where('slug',$slug)->first();
+        $project = Project::with("category","tags")->where('slug',$slug)->first();
         if($project){
             return response()->json([
                 "success" => true,
