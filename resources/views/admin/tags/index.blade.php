@@ -5,10 +5,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Created at</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data di creazione</th>
+                <th scope="col">Azioni</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +19,8 @@
                     <td>{{ $tag->created_at }}</td>
                     <td>
                         <a class="text-black" href="{{ route('admin.tags.show', $tag->slug) }}">Show</a>
-                        <a class="text-black" href="#">Edit</a>
-                        <a class="text-black" href="#">Delete</a>
+                        <a class="text-black" href="#">Modifica</a>
+                        <a class="text-black" href="#">Elimina</a>
                     </td>
                 </tr>
             @endforeach

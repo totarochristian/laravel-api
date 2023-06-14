@@ -5,10 +5,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Created at</th>
-                <th scope="col">Tools</th>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data di creazione</th>
+                <th scope="col">Azioni</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +19,8 @@
                     <td>{{ $category->created_at }}</td>
                     <td>
                         <a href="{{ route('admin.categories.show', $category->slug) }}">Show</a>
-                        <a href="">Edit</a>
-                        <a href="">Delete</a>
+                        <a href="">Modifica</a>
+                        <a href="">Elimina</a>
                     </td>
                 </tr>
             @endforeach

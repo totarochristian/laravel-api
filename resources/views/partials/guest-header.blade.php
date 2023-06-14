@@ -2,9 +2,9 @@
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
             <div class="logo_laravel">
-                <i class="fa-regular fa-newspaper"></i>
+                <img src="/images/logo.webp" alt="Logo Boolfolio">
             </div>
-            {{-- config('app.name', 'Laravel') --}}
+            <div class="sidebar-brand-text fs-5 fw-bold mx-3">Boolfolio</div>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -15,10 +15,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">
+                {{-- <li class="nav-item">
+                    <a class="nav-link fs-5 fw-bold" href="{{ url('/') }}">
                         Boolfolio</a>
-                </li>
+                </li> --}}
             </ul>
 
             <!-- Right Side Of Navbar -->

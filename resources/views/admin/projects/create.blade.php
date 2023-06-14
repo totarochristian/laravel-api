@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>Create Project</h1>
+    <h1>Creazione di un nuovo progetto</h1>
     <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-            <label for="title">Title</label>
+            <label for="title">Titolo</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
                 required maxlength="150" minlength="3">
             @error('title')
@@ -17,7 +17,7 @@
                 <img id="uploadPreview" width="100" src="https://via.placeholder.com/300x200">
             </div>
             <div class="mb-3">
-                <label for="image">Image</label>
+                <label for="image">Immagine</label>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image"
                     id="image">
                 @error('image')
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="mb-3">
-            <label for="category_id">Category</label>
+            <label for="category_id">Categoria</label>
             <select name="category_id" id="category_id" class="form-control @error('category_id') is-invalid @enderror">
                 <option value="">Seleziona categoria</option>
                 @foreach ($categories as $category)
@@ -38,7 +38,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="body">Body</label>
+            <label for="body">Descrizione</label>
             <textarea name="body" id="body" rows="10" class="form-control @error('body') is-invalid @enderror"></textarea>
             @error('body')
                 <div class="invalid-feedback">{{ $message }}</div>
@@ -61,7 +61,7 @@
             @enderror
         </div>
         <div class="form-group">
-            <p>Seleziona i Tag:</p>
+            <p>Seleziona le tecnologie utilizzate:</p>
             @foreach ($tags as $tag)
                 <div>
                     <input type="checkbox" name="tags[]" value="{{ $tag->id }}" class="form-check-input"
@@ -73,8 +73,8 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <button type="submit" class="btn btn-success">Save</button>
-        <button type="reset" class="btn btn-primary">Reset</button>
+        <button type="submit" class="btn btn-success">Salva</button>
+        <button type="reset" class="btn btn-primary">Resetta</button>
     </form>
     <script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
     <script type="text/javascript">

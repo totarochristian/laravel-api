@@ -7,7 +7,7 @@
             {{ session()->get('message') }}
         </div>
     @endif
-    <h6>Category: {{ $project->category ? $project->category->name : 'Senza categoria' }}
+    <h6>Categoria: {{ $project->category ? $project->category->name : 'Senza categoria' }}
         </td>
     </h6>
     <img src="{{ $project->image }}" alt="{{ $project->title }}">

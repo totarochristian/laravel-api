@@ -1,10 +1,10 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href={{ url('/') }}>
         <div class="sidebar-brand-icon">
-            <i class="fa-regular fa-newspaper"></i>
+            <img src="/images/logo.webp" alt="Logo Boolfolio">
         </div>
         <div class="sidebar-brand-text mx-3">Boolfolio</div>
     </a>
@@ -31,19 +31,19 @@
     <li class="nav-item">
         <a class="nav-link" role="button" href="{{ route('admin.projects.index') }}">
             <i class="fa-solid fa-note-sticky"></i>
-            <span>Projects</span>
+            <span>Progetti</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.categories.index') }}">
             <i class="fa-solid fa-layer-group"></i>
-            <span>Categories</span>
+            <span>Categorie</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.tags.index') }}">
             <i class="fa-solid fa-tags"></i>
-            <span>Tags</span>
+            <span>Tecnologie</span>
         </a>
     </li>
 

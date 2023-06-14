@@ -4,7 +4,7 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Index Post</h1>
 
-        <a class="btn btn-success text-white" href="{{ route('admin.projects.create') }}">Crea nuovo post</a>
+        <a class="btn btn-success text-white" href="{{ route('admin.projects.create') }}">Crea nuovo progetto</a>
 
     </div>
 
@@ -16,12 +16,12 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Title</th>
-                <th scope="col">Image</th>
-                <th scope="col">Category</th>
-                <th scope="col">Created</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Id</th>
+                <th scope="col">Titolo</th>
+                <th scope="col">Immagine</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Data di creazione</th>
+                <th scope="col">Azioni</th>
             </tr>
         </thead>
         <tbody>
